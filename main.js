@@ -4,10 +4,10 @@ let myInfo = {
     year_of_birth: 2004,
     address: "Ha Noi",
     getAge: function(name, year_of_birth) {
-        var d = new Date();
-        var current_year = d.getFullYear();
+        let d = new Date();
+        let current_year = d.getFullYear();
 
-        var age = current_year - year_of_birth;
+        let age = current_year - year_of_birth;
         console.log(name + " is " + age + " years old");
 }
     }
@@ -28,7 +28,7 @@ console.log(testData[random])
 let array1 = [1,0,2,3,4];
 let array2 = [3,5,6,7,8,13];
 let sum = []
-for(var i = 0; i < array1.length; i++){
+for(let i = 0; i < array1.length; i++){
     sum.push(array1[i] + array2[i]);
  }
 console.log(sum)
@@ -63,7 +63,7 @@ console.log(need)
 
 
 // ex6
-var student = {
+let student = {
     name : "David Rayy",
     sclass : "VI",
     rollno : 12 
