@@ -118,7 +118,18 @@ console.log(move([10, 20, 30, 40, 50], -1, -2));
 //     }
 // }
 // console.log(need)
-
+//True code
+// let renderFunction = (library) => {
+//   let map = "";
+//   for (let index = 0; index < library.length; index++) {
+//     if (library[index].readingStatus) {
+//       map += `Already read ${library[index].title} by ${library[index].author} \n`;
+//     } else {
+//       map += `You still need to read ${library[index].title} by ${library[index].author} \n`;
+//     }
+//   }
+//   console.log(map);
+// };
 // renderFunction(library);
 // // ex6
 //Bài nay dung rui
