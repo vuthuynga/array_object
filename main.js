@@ -2,16 +2,12 @@
 function run(name, year_of_birth) {
     let d = new Date();
     let current_year = d.getFullYear();
-    // define an object
     let myInfo = {
         name: name,
         year_of_birth: year_of_birth,
         address: "Ha Noi"
     }
-    // Calculate age ...
     let age = current_year - myInfo.year_of_birth
-    console.log(myInfo);
-    // print object
     console.log(myInfo.name + " is " + age + " years old");
 }
 run("Nga", 2004)
@@ -50,7 +46,7 @@ console.log(move([10, 20, 30, 40, 50], -1, -2));
 
 
 // // ex4
-//Bai nay cung bo vao function nhe, nhung em nen bo sung them dieu kien neu hai mang khong co do dai bang nhau thi tinh nhu nao
+//Bai nay nen bo sung them dieu kien neu hai mang khong co do dai bang nhau thi tinh nhu nao
 // let array1 = [1,0,2,3,4];
 // let array2 = [3,5,6,7,8,13];
 // let sum = []
@@ -97,12 +93,14 @@ let library = [
 for(let i=0; i<= library.length-1;i++)
      {   
         if (library[i].readingStatus == true) { 
-            console.log("Already read" + `${library[i].title}`  +"by"+ `${library[i].author}`)
+            console.log("Already read " + `${library[i].title}`  +" by "+ `${library[i].author}`)
         } 
         else {
-            console.log("You still need to read" + `${library[i].title}` +"by"+ `${library[i].author}`)
+            console.log("You still need to read " + `${library[i].title}` +" by "+ `${library[i].author}`)
         }
      }
+
+
 // let need = function() {
 //     if(readingStatus == true) {
 //         console.log(`'Already read ',title, 'by', author` )
