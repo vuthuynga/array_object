@@ -1,34 +1,4 @@
-// ex1
-let myInfo = {
-    name: 'Vu Thi Thuy Nga',
-    year_of_birth: 2004,
-    address: "Ha Noi",
-    getAge: function(name, year_of_birth) {
-        var d = new Date();
-        var current_year = d.getFullYear();
-
-        var age = current_year - year_of_birth;
-        console.log(name + " is " + age + " years old");
-}
-    }
-console.log(myInfo)
-console.log(myInfo.getAge())
-
-let myInfo2 = {
-    name: 'Vu Thi Thuy Nga',
-    year_of_birth: 2004,
-    address: "Ha Noi",
-    getAge: function(name, year_of_birth) {
-        let d = new Date();
-        let current_year = d.getFullYear();
-
-        let age = current_year - this.year_of_birth;
-        return this.name + " is " + age + " years old"
-}
-    }
-console.log(myInfo)
-
-//True code with true demand
+// // ex1
 function run(name, year_of_birth) {
     let d = new Date();
     let current_year = d.getFullYear();
@@ -44,15 +14,19 @@ function run(name, year_of_birth) {
     // print object
     console.log(myInfo.name + " is " + age + " years old");
 }
-run("Tuong", 2003)
+run("Nga", 2004)
 
-// ex2
+
+// // ex2
 //Bai nay dung roi nhung bo vào function de tai su dung nhe
-let random = Math.floor(Math.random() * 5)
 let testData = [254, 45, 212, 365, 2543]
-console.log(testData[random])
+function random(arr){
+        console.log(arr[Math.floor(Math.random()*5)])
+    }
+random(testData);
 
-// ex3
+
+// // ex3
 // cau nay em can tim hieu them 
 function move(arr, old_index, new_index) {
     while (old_index < 0) {
@@ -73,18 +47,36 @@ function move(arr, old_index, new_index) {
 
 console.log(move([10, 20, 30, 40, 50], 0, 2));
 console.log(move([10, 20, 30, 40, 50], -1, -2));
+
+
 // // ex4
 //Bai nay cung bo vao function nhe, nhung em nen bo sung them dieu kien neu hai mang khong co do dai bang nhau thi tinh nhu nao
+// let array1 = [1,0,2,3,4];
+// let array2 = [3,5,6,7,8,13];
+// let sum = []
+// for(var i = 0; i < array1.length; i++){
+//     sum.push(array1[i] + array2[i]);
+//  }
+// console.log(sum)
+
 let array1 = [1,0,2,3,4];
-let array2 = [3,5,6,7,8,13];
-let sum = []
-for(var i = 0; i < array1.length; i++){
-    sum.push(array1[i] + array2[i]);
- }
-console.log(sum)
+ let array2 = [3,5,6,7,8,13];
+let a;
+let b=[];
+if (array1.length>array2.length){ a=array1.length-1;
+ for (let i=0 ; i<=(array1.length - array2.length); i++){
+    array2.push(0);}
+}
+ else{ a=array2.length-1;
+    for (let i=0 ; i<=(array2.length - array1.length); i++){
+        array1.push(0);
+}}
+for (let i=0 ;i<=a; i++){
+    b.push(array1[i]+array2[i])  
+}
+console.log(b)
 
 // // ex5
-// Bai nay sai het cu phap mat ruiii
 let library = [
   {
     author: "Bill Gates",
@@ -102,19 +94,27 @@ let library = [
     readingStatus: false,
   },
 ];
-let need = function() {
-    if(readingStatus == true) {
-        console.log(`'Already read ',title, 'by', author` )
-    }
-    else {
-        console.log('You still need to read', title, 'by', author)
-    }
-}
-console.log(need)
+for(let i=0; i<= library.length-1;i++)
+     {   
+        if (library[i].readingStatus == true) { 
+            console.log("Already read" + `${library[i].title}`  +"by"+ `${library[i].author}`)
+        } 
+        else {
+            console.log("You still need to read" + `${library[i].title}` +"by"+ `${library[i].author}`)
+        }
+     }
+// let need = function() {
+//     if(readingStatus == true) {
+//         console.log(`'Already read ',title, 'by', author` )
+//     }
+//     else {
+//         console.log('You still need to read', title, 'by', author)
+//     }
+// }
+// console.log(need)
 
 
 // // ex6
-//Bài nay dung rui
 let student = {
     name : "David Rayy",
     sclass : "VI",
