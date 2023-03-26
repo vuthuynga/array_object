@@ -1,48 +1,48 @@
-// // ex1
-function run(name, year_of_birth) {
-    let d = new Date();
-    let current_year = d.getFullYear();
-    let myInfo = {
-        name: name,
-        year_of_birth: year_of_birth,
-        address: "Ha Noi"
-    }
-    let age = current_year - myInfo.year_of_birth
-    console.log(myInfo.name + " is " + age + " years old");
-}
-run("Nga", 2004)
+// // // ex1
+// function run(name, year_of_birth) {
+//     let d = new Date();
+//     let current_year = d.getFullYear();
+//     let myInfo = {
+//         name: name,
+//         year_of_birth: year_of_birth,
+//         address: "Ha Noi"
+//     }
+//     let age = current_year - myInfo.year_of_birth
+//     console.log(myInfo.name + " is " + age + " years old");
+// }
+// run("Nga", 2004)
+// run('An', 200)
+
+// // // ex2
+// //Bai nay dung roi nhung bo vào function de tai su dung nhe
+// let testData = [254, 45, 212, 365, 2543]
+// function random(arr){
+//         console.log(arr[Math.floor(Math.random()*5)])
+//     }
+// random(testData);
 
 
-// // ex2
-//Bai nay dung roi nhung bo vào function de tai su dung nhe
-let testData = [254, 45, 212, 365, 2543]
-function random(arr){
-        console.log(arr[Math.floor(Math.random()*5)])
-    }
-random(testData);
+// // // ex3
+// // cau nay em can tim hieu them 
+// function move(arr, old_index, new_index) {
+//     while (old_index < 0) {
+//         old_index += arr.length;
+//     }
+//     while (new_index < 0) {
+//         new_index += arr.length;
+//     }
+//     if (new_index >= arr.length) {
+//         var k = new_index - arr.length;
+//         while ((k--) + 1) {
+//             arr.push(undefined);
+//         }
+//     }
+//      arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);  
+//    return arr;
+// }
 
-
-// // ex3
-// cau nay em can tim hieu them 
-function move(arr, old_index, new_index) {
-    while (old_index < 0) {
-        old_index += arr.length;
-    }
-    while (new_index < 0) {
-        new_index += arr.length;
-    }
-    if (new_index >= arr.length) {
-        var k = new_index - arr.length;
-        while ((k--) + 1) {
-            arr.push(undefined);
-        }
-    }
-     arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);  
-   return arr;
-}
-
-console.log(move([10, 20, 30, 40, 50], 0, 2));
-console.log(move([10, 20, 30, 40, 50], -1, -2));
+// console.log(move([10, 20, 30, 40, 50], 0, 2));
+// console.log(move([10, 20, 30, 40, 50], -1, -2));
 
 
 // // ex4
@@ -93,7 +93,7 @@ let library = [
 for(let i=0; i<= library.length-1;i++)
      {   
         if (library[i].readingStatus == true) { 
-            console.log("Already read " + `${library[i].title}`  +" by "+ `${library[i].author}`)
+            console.log(`Already read ${library[i].title} by ${library[i].author}`)
         } 
         else {
             console.log("You still need to read " + `${library[i].title}` +" by "+ `${library[i].author}`)
